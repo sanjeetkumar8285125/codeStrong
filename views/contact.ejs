@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="/images/cropped-Strong-3-1.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Contact Form</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <nav class="navbar navbar-light navbar-expand-lg bg-light sticky-top">
+      <div class="container">
+        <a href="/" class="navbar-brand">
+          <img
+            src="/images/cropped-Strong-3-1.png"
+            width="150"
+            height="auto"
+            alt=""
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="/" class="nav-link"> Home </a>
+            </li>
+            <!-- <li class="nav-item">
+              <a href="/aboutus.html" class="nav-link"> About us </a>
+            </li> -->
+            <li class="nav-item">
+              <a href="/contact" class="nav-link active"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- HERO -->
+    <div class="jumbotron jcf"></div>
+    <!-- <div class="card contact-card">
+      <div class="card-body contact-cb">
+        <p>
+          Get in Touch,<br />
+          we'll make you a Beliver. "We're here to help". Fill out the form and
+          we'll get back to you as soon as possible.
+        </p>
+      </div> -->
+    </div>
+    <h2 class="text-center c-h2">Contact us</h2>
+    <h6 class="text-center c-h6">
+      Our team would be happy to all your questions.
+    </h6>
+    <div class="container c-form my-4">
+      <p class="text-right">please fill all column which are marked as <sup class="req">*</sup></p>
+      <%- include('message') %>
+      <form action="/contact" method="POST">
+        <label for="fname">First Name<sup class="req">*</sup></label>
+        <input
+          type="text"
+          id="fname"
+          name="firstname"
+          placeholder="Your First Name"
+        />
+
+        <label for="lname">Last Name<sup class="req">*</sup></label>
+        <input
+          type="text"
+          id="lname"
+          name="lastname"
+          placeholder="Your Last Name"
+        />
+
+        <label for="lname">Email-Id<sup class="req">*</sup></label>
+        <input
+          type="email"
+          id="email"
+          name="emailid"
+          placeholder="Your Email-Id"
+        />
+
+        <label for="lname">Mobile Number<sup class="req">*</sup></label>
+        <input
+          type="text"
+          id="number"
+          name="number"
+          placeholder="Your Mobile Number"
+        />
+
+        <label for="Courses"
+          >Courses<span style="font-size: 14px">
+            (select "others" if your course is not here)</span
+          ><sup class="req">*</sup></label
+        >
+        <div class="accordion" id="accordionExample">
+          <div class="card dd-card">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-0">
+                <button
+                  class="btn btn-link"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                  style="text-decoration: none; color: blue"
+                >
+                  SELECT YOUR COURSES <i class="fas fa-chevron-down"></i>
+                </button>
+              </h2>
+            </div>
+            <div
+              id="collapseOne"
+              class="collapse show"
+              aria-labelledby="headingOne"
+              data-parent="#accordionExample"
+            >
+              <div class="card-body">
+                <div class="accordion" id="accordionExample">
+                  <div class="card dd-card">
+                    <div class="card-header" id="headingOne">
+                      <input
+                        type="radio"
+                        name="language"
+                        id="c++"
+                        value="C++"
+                        aria-checked="false"
+                      />
+                      C++
+                    </div>
+                    <div class="card-header" id="headingOne">
+                      <input
+                        type="radio"
+                        name="language"
+                        id="python"
+                        value="Python"
+                        aria-checked="false"
+                      />
+                      Python
+                    </div>
+                    <div class="card-header" id="headingOne">
+                      <input
+                        type="radio"
+                        name="language"
+                        id="webdev"
+                        value="Web Development"
+                        aria-checked="false"
+                      />
+                      Web Development
+                    </div>
+
+                    <div class="card-header" id="headingOne">
+                      <input
+                        type="radio"
+                        name="language"
+                        value="Others"
+                        data-toggle="collapse"
+                        data-target="#collapseExample"
+                        aria-expanded="false"
+                        aria-controls="collapseExample"
+                      />
+                      Others
+                      <div class="collapse" id="collapseExample">
+                        <div class="card card-body dd-card">
+                          <label for="Courses"
+                            >which courses do you want from us?</label
+                          >
+                          <input
+                            type="text"
+                            data-show="collapse"
+                            data-target="#collapseOne"
+                            aria-expanded="True"
+                            aria-controls="collapseOne"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br /><br />
+        <input type="submit" value="Submit" onclick="validateForm();" />
+      </form>
+    </div>
+    <div class="footer">
+      <div class="icons pt-3">
+        <a href="#" class="social-icons"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icons"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icons"><i class="fab fa-youtube"></i></a>
+      </div>
+      <div class="copy pt-3">
+        <p>Copyright @2021, All Rights Reserved.</p>
+      </div>
+    </div>
+    <script src="/javascripts/validate.js"></script>
+    <!-- <script>
+      $(document).ready(function() {
+
+  
+$('[data-toggle="collapse"]').click(function() {
+  $(this).toggleClass( "active" );
+  if ($(this).hasClass("active")) {
+    $(this).text("Hide");
+  } else {
+    $(this).text("Show");
+  }
+});
+   
+});
+    </script> -->
+  </body>
+</html>
