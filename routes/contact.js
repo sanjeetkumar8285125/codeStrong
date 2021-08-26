@@ -73,7 +73,7 @@ try{
     `
   const mailOptions={
     from:'Code Strong <sanjeet3357@gmail.com>',  //sender email id
-    to:"adityatanwar99@gmail.com,adityakumarst12@gmail.com",             //reciever email address
+    to:"adityatanwar99@gmail.com,adityakumarst12@gmail.com,info@codestrong.in",             //reciever email address
     subject:"Code Strong Customer contact us form data",   //subject of email
     generateTextFromHTML: true,
     html:output
