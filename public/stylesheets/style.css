@@ -158,7 +158,7 @@ section:before {
 
 /*flipper-card*/
 .row {
-  height: 60vh;
+  height: 65vh;
 }
 @media screen and (max-width: 768px) {
   .row {
@@ -658,12 +658,19 @@ button.active {
   margin-top: 4em;
   display: flex;
   flex-direction: column;
-  text-align: center;
   justify-content: center;
   align-items: center;
 }
-.footer a {
-  flex-direction: row;
+.contact {
+  background: rgb(0, 0, 148);
+  border: rgb(0, 0, 148);
+  text-align: right;
+  justify-content: right;
+  align-items: flex-end;
+}
+.footer .social-icons {
+  text-align: center;
+
   font-size: 26px;
   color: #ffffff;
   text-decoration: none;
@@ -672,7 +679,7 @@ button.active {
   padding: 5px 12px;
   border-radius: 10px;
 }
-.footer a:hover {
+.footer .social-icons:hover {
   background: #ffffff;
   color: rgb(0, 0, 148);
 }
